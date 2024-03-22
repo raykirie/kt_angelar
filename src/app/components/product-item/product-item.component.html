@@ -1,0 +1,11 @@
+<div class="card">
+    <img [src]="thumbnail"/>
+    <div class="product_card">
+        <h2>Title: {{ title }}</h2>
+        <h2>Category: {{ category }}</h2>
+        <h2>Price: {{ price }}</h2>        
+        <div class="star-container">
+            <span *ngFor="let star of getStars(); let i = index" class="star" [class.active]="star === 1 || star === 0.5"><i class="fas fa-star"></i></span>
+        </div>     
+    </div>
+</div>
